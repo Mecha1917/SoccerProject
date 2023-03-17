@@ -221,6 +221,7 @@ public class SoccerDatabase implements SoccerDB {
                 for (int i = 0; i < goals; i++) {
                     player.bumpYellowCards();
                 }
+                database.put(makeKey(firstName, lastName), player);
             }
             scanner.close();
             return true;
